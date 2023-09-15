@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    background-color: rgb(45, 45, 45);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+#bord {
+    background-color: black;
+    width: 90vmin;
+    height: 92vmin;
+    border: 2.5px solid rgb(179, 179, 179);
+    display: grid;
+    grid-template-rows: repeat(18,1fr);
+    grid-template-columns: repeat(18,1fr);
+    z-index: 20;
+    
+}
+.head{
+    background-color: rgb(28, 225, 35);
+    border-radius: 2px;
+    z-index: 4;
+    
+}
+.food{
+    background-color: rgb(209, 0, 0);
+    border-radius: 50%;
+    z-index: 0;
+    
+}
+.snake{
+    background-color: rgb(28, 225, 35);
+    opacity: 0.5;
+    border: 0.25vmin  solid black;
+    border-radius: 3px;
+}
+
+#scoreBox{
+    position: absolute;
+   
+    color: white;
+    left: 60rem;
+    top: 15px;
+    font-family: 'Rubik Maze', cursive;
+    font-size: 50px;
+}
+#hiScoreBox{
+    position: absolute;
+   
+    color: rgb(28, 225, 35);
+    left: 60rem;
+    top: 70px;
+    font-family: 'Rubik Maze', cursive;
+    font-size: 50px;
+}
+
+
+.snakeP{
+   font-size: 6.1rem;
+    position: absolute;
+    font-family: 'Rubik Maze', cursive;
+    color: white;
+    margin-left: 5px;
+    z-index: 5;
+    top: 55px;
+    left: 5px;
+    
+    
+}
+.gamep{
+    font-size: 7.7rem;
+    position: absolute;
+    font-family: 'Rubik Maze', cursive;
+    color: white;
+    z-index: 5;
+    right:7px ;
+    bottom: 3px;
+    margin-left: 9px;
+}
+
+.wavy{
+    position: absolute; 
+   
+}
+.wavy::before{
+    content: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    
+    position: absolute;
+    left: -40rem;
+    top: -130px;
+    color: transparent;
+    font-size:3rem;
+    font-weight:lighter;
+    text-decoration-style: wavy;
+    text-decoration-color:rgb(51, 250, 48);
+    text-decoration-line: underline;
+    animation: animate 0.5s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-1px);
+    }
+    100%{
+        transform: translate(-52px);
+    }
+}
+
+#soundOnOff{
+    color: green;
+    font-size: 30px;
+    position: absolute;
+    right: 13px;
+    top: 7px;
+    z-index: 2;
+}
+#soundOff{
+    color: green;
+    font-size: 30px;
+    position: absolute;
+    right: 13px;
+    top: 7px;
+    opacity: 0;
+    z-index: 1;
+}
+#soundBag{
+   background-color: black;
+    opacity: 0.4;
+    position: absolute;
+    right: 8px;
+    top: 4px;
+    z-index: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
